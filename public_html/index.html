@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script language="javascript" type="text/javascript" src="lib/jquery/jquery-1.7.2.min.js"></script>
+        <!--[if lt IE 9]>
+            <script language="javascript" type="text/javascript" src="excanvas.min.js"></script>
+        <![endif]-->
+        <script language="javascript" type="text/javascript" src="lib/jqplot/jquery.jqplot.min.js"></script>
+        <script language="javascript" type="text/javascript" src="lib/jqplot/plugins/jqplot.barRenderer.min.js"></script>
+        <script language="javascript" type="text/javascript" src="lib/jqplot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="css/jquery.jqplot.min.css" />
+        
+        <script>
+            var params = {
+                seriesDefaults : {
+                    renderer : $.jqplot.BarRenderer
+                },
+                title : {
+                    text : "hogehoge Club",
+                    show : true,
+                    fontFamily : "Apple Chancery",
+                    fontSize : 26,
+                    textAlign : "center"
+                },
+                axes : {
+                    xaxis : {
+                        renderer: $.jqplot.CategoryAxisRenderer
+                    }
+                }
+            }
+            $(function() {
+                $.jqplot(
+                    'jqPlot-sample',
+                    [
+                        [ [ 1, 65 ], [ 2, 72 ], [ 3, 74 ], [ 4, 63 ], [ 5, 85 ], [ 6, 90 ] ],
+                        [ [ 1, 35 ], [ 2, 22 ], [ 3, 24 ], [ 4, 83 ], [ 5, 95 ], [ 6, 40 ] ]
+                    ],
+                    params
+                );
+            } );
+        </script>
+
+    </head>
+    <body>
+        <div>jqplot sample</div>
+        <div id="jqPlot-sample" style="height: 1000px; width: 1000px;"></div>
+    </body>
+</html>
